@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charging Screen</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('Image/chargeImage.jpeg');
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #progressBar {
+            width: 400px;
+            height: 30px;
+            background-color: #ddd;
+            border-radius: 15px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+        #progressBarFill {
+            width: 0;
+            height: 100%;
+            background-color: #4caf50;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="progressBar">
+        <div id="progressBarFill"></div>
+    </div>
+    <script>
+        window.onload = function() {
+            var progressBarFill = document.getElementById('progressBarFill');
+            var i = 0;
+            var timer = setInterval(function() {
+                if (i < 100) {
+                    i++;
+                    progressBarFill.style.width = i + '%';
+                } else {
+                    clearInterval(timer);
+                    console.log('Caricamento completato');
+                    // Aggiungi qui la logica per passare alla schermata successiva
+                }
+            }, 800);
+        };
+    </script>
+</body>
+</html>
