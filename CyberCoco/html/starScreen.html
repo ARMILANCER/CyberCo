@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Screen</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('Image/menu.jpeg');
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #startButton {
+            width: 120px;
+            height: 40px;
+            margin-top: 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="startButton">START</button>
+    <script>
+        document.getElementById('startButton').addEventListener('click', function() {
+            // Aggiungi qui la logica per passare alla schermata di caricamento
+            console.log('Start button clicked');
+        });
+    </script>
+</body>
+</html>
