@@ -25,8 +25,6 @@ function validationMail(mail){
     console.log(validation);
     return validation;
 }
-
-
 function validationPassword(password){
     let validation = true;
     password = normalizeData(password);

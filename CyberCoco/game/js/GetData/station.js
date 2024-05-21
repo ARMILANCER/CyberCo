@@ -28,12 +28,9 @@ class Station {
         }
     }
 }
-
-// Usage example
 const station = new Station();
 station.getStationImage()
     .then(image => {
-        // Do something with the loaded image
         console.log('Image loaded:', image);
     })
     .catch(error => {
